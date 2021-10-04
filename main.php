@@ -14,3 +14,5 @@ require_once LT_PLUGIN_DIR . '/includes/require_acf.php';
 require_once LT_PLUGIN_DIR . '/includes/courses_post_type.php';
 require_once LT_PLUGIN_DIR . '/includes/courses_template.php';
 require_once LT_PLUGIN_DIR . '/includes/custom_fields.php';
+require_once LT_PLUGIN_DIR . '/includes/create_courses.php';
+

@@ -24,7 +24,6 @@ function courses_post_type() {
         'description'         => __( 'Courses', 'twentytwenty' ),
         'labels'              => $labels,
         'supports'            => array( 'title', 'editor' ),
-        // You can associate this CPT with a taxonomy or custom taxonomy. 
         'hierarchical'        => false,
         'public'              => true,
         'show_ui'             => true,
@@ -40,5 +39,5 @@ function courses_post_type() {
         'show_in_rest' => true,
  
     );
-    register_post_type( 'courses', $args );
+    register_post_type( 'course', $args );
 }
