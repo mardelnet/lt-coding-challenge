@@ -7,3 +7,5 @@
  * Author: Pedro Figueroa
  * Author URI: https://www.linkedin.com/in/pedrofigueroa1989/
  */
+
+define( 'LT_PLUGIN_DIR', untrailingslashit( dirname( __FILE__ ) ) );
