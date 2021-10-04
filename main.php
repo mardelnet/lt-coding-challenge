@@ -9,3 +9,5 @@
  */
 
 define( 'LT_PLUGIN_DIR', untrailingslashit( dirname( __FILE__ ) ) );
+
+require_once LT_PLUGIN_DIR . '/includes/courses_post_type.php';
