@@ -8,9 +8,9 @@
  * Author URI: https://www.linkedin.com/in/pedrofigueroa1989/
  */
 
-
 define( 'LT_PLUGIN_DIR', untrailingslashit( dirname( __FILE__ ) ) );
 
 require_once LT_PLUGIN_DIR . '/includes/require_acf.php';
 require_once LT_PLUGIN_DIR . '/includes/courses_post_type.php';
 require_once LT_PLUGIN_DIR . '/includes/courses_template.php';
+require_once LT_PLUGIN_DIR . '/includes/custom_fields.php';
