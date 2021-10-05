@@ -1,4 +1,5 @@
 <?php
+// This function adds ACF metadata to the courses API, for example, the feautured image or the extract
 add_action( 'rest_api_init', 'add_meta_to_courses' );
  
 function add_meta_to_courses() {

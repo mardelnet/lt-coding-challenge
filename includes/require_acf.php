@@ -1,4 +1,5 @@
 <?php 
+// This function enable the plugin activiation only if the ACF plugin is already installed and activated
 add_action( 'admin_init', 'spp_plugin_has_parents' );
 
 function spp_plugin_has_parents() {

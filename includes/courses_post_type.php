@@ -1,5 +1,5 @@
 <?php
-
+// This function creates the course post type
 add_action( 'init', 'courses_post_type', 0 );
 
 function courses_post_type() {

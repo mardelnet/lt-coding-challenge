@@ -1,4 +1,5 @@
 <?php
+// This function adds new courses every time the plugin is activated, just for testing purposes
 register_activation_hook( LT_PLUGIN_DIR . '/main.php', 'create_courses_programmatically'); 
  
 function create_courses_programmatically(){

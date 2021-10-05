@@ -1,4 +1,8 @@
 <?php
+
+add_action( 'plugins_loaded', array( 'PageTemplater', 'get_instance' ) ); // This function creates page templates from the plugin
+add_filter( 'template_include', 'force_archive_courses_template' ); // This function forces the courses archive page to use the custom template
+
 class PageTemplater {
 
 /**
@@ -145,16 +149,12 @@ public function view_project_template( $template ) {
 
     // Return template
     return $template;
-
 }
 
 } 
-add_action( 'plugins_loaded', array( 'PageTemplater', 'get_instance' ) );
-
 function force_archive_courses_template( $template ) {
     if( is_archive() && get_post_type() == 'course' ) {
         $template = LT_PLUGIN_DIR .'/templates/course-overview.php';
     }
     return $template;
 }
-add_filter( 'template_include', 'force_archive_courses_template' );
