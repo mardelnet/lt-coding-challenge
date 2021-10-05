@@ -67,7 +67,7 @@ private function __construct() {
 
     // Add your templates to this array.
     $this->templates = array(
-        'course-overview.php' => 'Course Overview',
+        '../templates/course-overview.php' => 'Course Overview',
     );
         
 } 

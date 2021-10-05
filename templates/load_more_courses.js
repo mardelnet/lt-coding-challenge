@@ -22,10 +22,10 @@ ajaxButton.on('click', function(e) {
       if ( currentPage <= pagesTotal ) {
         for (var i = 0; i < data.length; i++) {
           results.append(
-            "<div class='column flex direction-column'>" +
+            "<div class='column flex'>" +
                 "<div class='flex direction-row'>" +
                     "<img class='icon' src='" + data[i].metadata.image_url + "'>" +
-                    "<div>" +
+                    "<div class='flex direction-column'>" +
                       "<h3>" + data[i].title.rendered + "</h3>" +
                       "<p>" + data[i].metadata.extract + "</p>" +
                       "<a class='button' href='" + data[i].link + "'>Learn More</a>" +

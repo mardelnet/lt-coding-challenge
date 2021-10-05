@@ -1,4 +1,7 @@
-body, p {
+body {
+    padding: 96px 0;
+}
+body, p, div {
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -23,7 +26,7 @@ h2 {
     line-height: 28px;
     text-align: center;
     color: #6B7280;
-    margin: 0 auto;
+    margin: 0 auto 96px;
     max-width: 576px;
 }
 h3 {
@@ -44,11 +47,16 @@ h3 {
     border-radius: 6px;
     margin: 80px auto;
     color: white;
-    border: 0;
+    border: 1px solid #4F46E5;
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
     cursor: pointer;
+    transition: all 0.25s;
+}
+#ajax:hover {
+    background-color: white;
+    color: #4F46E5;
 }
 .button {
     border: 1px solid #D1D5DB;
@@ -64,6 +72,11 @@ h3 {
     text-decoration: none;
     width: fit-content;
     margin-top: auto;
+    transition: all 0.25s;
+}
+.button:hover {
+    background-color: #D1D5DB;
+    color: white;
 }
 .container {
     width: 100%;
@@ -87,16 +100,29 @@ h3 {
 .row {
     flex-wrap: wrap;
     width: 100%;
-    border: 1px solid #E5E7EB;
-    border-radius: 8px;
 }
 .column {
     flex: 50%;
     padding: 24px;
     box-sizing: border-box;
+    border: 1px solid #E5E7EB;
+    background-color: white;
 }
-.title {
-    padding: 96px 0;
+.column:nth-child(1) {
+    border-top: 1px solid #f6f6f6;
+    border-top-left-radius: 8px;
+}
+.column:nth-child(2) {
+    border-top: 1px solid #f6f6f6;
+    border-top-right-radius: 8px;
+}
+.column:last-child {
+    border-bottom-right-radius: 8px;
+    box-shadow: 0px 2px 2px #e5e7eb;
+}
+.column:nth-last-child(2) {
+    border-bottom-left-radius: 8px;
+    box-shadow: 0px 2px 2px #e5e7eb;
 }
 
 @media only screen and (min-width: 1100px) {
@@ -107,5 +133,23 @@ h3 {
 @media only screen and (max-width: 768px) {
     .column {
         flex: 100%;
+    }
+    .column:nth-child(1) {
+        border-top: 1px solid #f6f6f6;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+    .column:nth-child(2) {
+        border-top: 1px solid #E5E7EB;
+        border-top-right-radius: 0px;
+    }
+    .column:last-child {
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        box-shadow: 0px 2px 2px #e5e7eb;
+    }
+    .column:nth-last-child(2) {
+        border-bottom-left-radius: 0px;
+        box-shadow: 0;
     }
 }
