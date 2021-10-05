@@ -152,8 +152,8 @@ public function view_project_template( $template ) {
 add_action( 'plugins_loaded', array( 'PageTemplater', 'get_instance' ) );
 
 function force_archive_courses_template( $template ) {
-    if( is_archive() && get_post_type() == 'courses' ) {
-        $template = LT_PLUGIN_DIR .'/includes/course-overview.php';
+    if( is_archive() && get_post_type() == 'course' ) {
+        $template = LT_PLUGIN_DIR .'/templates/course-overview.php';
     }
     return $template;
 }
