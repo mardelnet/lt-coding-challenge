@@ -35,15 +35,16 @@ ajaxButton.on('click', function(e) {
             ); // Add current post to list
         }
       }
-      /*
       if ( currentPage == pagesTotal ) {
-        ajaxButton.remove(); // Remove button if last page is reached
+        console.log(currentPage);
+        console.log(pagesTotal);
+        //ajaxButton.remove(); // Remove button if last page is reached
+        ajaxButton.addClass('disabled');
       }
-      */
       currentPage++; // Move to next page
     },
     complete: function() {
-      ajaxButton.attr('disabled', true); // Enable button after ajax request is complete
+      ajaxButton.attr('disabled', false); // Enable button after ajax request is complete
     },
     cache: false
   })
