@@ -1,7 +1,14 @@
 # Coding Challenge
 
-Create a custom WordPress plugin to manage and render a list of courses as shown on the provided designs.
+## Comments
+- This plugin needs the ACF plugin to work correctly. If ACF is not installed, this plugin won't activate and an error message will be shown.
+- After activating the plugin, six courses posts will be automatically added with their corresponding ACFs and content.
+- Items to improve:
+  - I could not find a way to enqueue the template scripts within the plugin, so I called the external css and js files normally.
+  - The "append" function in the "load_more_courses.js" file could be improved.
 
+### Objectives
+Create a custom WordPress plugin to manage and render a list of courses as shown on the provided designs.
 The plugin should be following WordPress development standards and fulfill the following technical requirements.
 
 ### Designs
