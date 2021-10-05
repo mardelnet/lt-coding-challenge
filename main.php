@@ -8,12 +8,25 @@
  * Author URI: https://www.linkedin.com/in/pedrofigueroa1989/
  */
 
-define( 'LT_PLUGIN_DIR', untrailingslashit( dirname( __FILE__ ) ) );
-define( 'LT_PLUGIN_BASE', plugin_dir_url( __FILE__ ) );
+class LTcourses {
+	
+	function __construct() {
+		// Do nothing.
+	}
+	
+	function initialize() {
+		
+		define( 'LT_PLUGIN_DIR', untrailingslashit( dirname( __FILE__ ) ) );
+        define( 'LT_PLUGIN_BASE', plugin_dir_url( __FILE__ ) );
 
-require_once LT_PLUGIN_DIR . '/includes/require_acf.php';
-require_once LT_PLUGIN_DIR . '/includes/courses_post_type.php';
-require_once LT_PLUGIN_DIR . '/includes/courses_template.php';
-require_once LT_PLUGIN_DIR . '/includes/custom_fields.php';
-require_once LT_PLUGIN_DIR . '/includes/create_courses.php';
-require_once LT_PLUGIN_DIR . '/includes/add_meta_to_api.php';
+        require_once LT_PLUGIN_DIR . '/includes/require_acf.php';
+        require_once LT_PLUGIN_DIR . '/includes/courses_post_type.php';
+        require_once LT_PLUGIN_DIR . '/includes/courses_template.php';
+        require_once LT_PLUGIN_DIR . '/includes/custom_fields.php';
+        require_once LT_PLUGIN_DIR . '/includes/create_courses.php';
+        require_once LT_PLUGIN_DIR . '/includes/add_meta_to_api.php';
+    }
+}
+
+$courses = new LTcourses();
+$courses -> initialize();

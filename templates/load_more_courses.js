@@ -14,7 +14,7 @@ ajaxButton.on('click', function(e) {
     },
     success: function(data, textStatus, request) {
 
-      console.log(data);
+      //console.log(data);
       
       if (!pagesTotal) {
         pagesTotal = request.getResponseHeader('x-wp-totalpages'); // Get total pages
@@ -35,13 +35,15 @@ ajaxButton.on('click', function(e) {
             ); // Add current post to list
         }
       }
+      /*
       if ( currentPage == pagesTotal ) {
         ajaxButton.remove(); // Remove button if last page is reached
       }
+      */
       currentPage++; // Move to next page
     },
     complete: function() {
-      ajaxButton.attr('disabled', false); // Enable button after ajax request is complete
+      ajaxButton.attr('disabled', true); // Enable button after ajax request is complete
     },
     cache: false
   })
