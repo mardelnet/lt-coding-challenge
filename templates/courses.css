@@ -69,17 +69,28 @@ h3 {
     width: 100%;
     margin: 0 auto;
 }
-.row {
-    display: flex;
+.direction-column {
+    flex-direction: column;
+}
+.direction-row {
     flex-direction: row;
+}
+.flex {
+    display: flex;
+}
+.icon {
+    width: 100%;
+    max-width: 48px;
+    height: 48px;
+    margin-right: 24px;
+}
+.row {
     flex-wrap: wrap;
     width: 100%;
     border: 1px solid #E5E7EB;
     border-radius: 8px;
 }
 .column {
-    display: flex;
-    flex-direction: column;
     flex: 50%;
     padding: 24px;
     box-sizing: border-box;

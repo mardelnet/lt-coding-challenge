@@ -13,6 +13,8 @@ ajaxButton.on('click', function(e) {
       ajaxButton.attr('disabled', true); // Disable button while ajax request is in progress
     },
     success: function(data, textStatus, request) {
+
+      console.log(data);
       
       if (!pagesTotal) {
         pagesTotal = request.getResponseHeader('x-wp-totalpages'); // Get total pages
@@ -20,10 +22,15 @@ ajaxButton.on('click', function(e) {
       if ( currentPage <= pagesTotal ) {
         for (var i = 0; i < data.length; i++) {
           results.append(
-            "<div class='column'>" +
-                "<h3>" + data[i].title.rendered + "</h3>" +
-                "<p>" +  + "</p>" +
-                "<a class='button' href='" + data[i].link + "'>Learn More</a>" +
+            "<div class='column flex direction-column'>" +
+                "<div class='flex direction-row'>" +
+                    "<img class='icon' src='" + data[i].metadata.image_url + "'>" +
+                    "<div>" +
+                      "<h3>" + data[i].title.rendered + "</h3>" +
+                      "<p>" + data[i].metadata.extract + "</p>" +
+                      "<a class='button' href='" + data[i].link + "'>Learn More</a>" +
+                    "</div>" +
+                "</div>" +
             "</div>"
             ); // Add current post to list
         }

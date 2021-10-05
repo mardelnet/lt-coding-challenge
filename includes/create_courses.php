@@ -21,7 +21,7 @@ function create_courses_programmatically(){
             'post_author'   => 1,
             'meta_input'   => array(
                 'extract' => 'Doloribus dolores nostrum quia qui natus officia quod et dolorem. Sit repellendus qui ut at blanditiis et quo et molestiae.',
-                'image_url' => LT_PLUGIN_DIR . '/includes/icon.png',
+                'image_url' => LT_PLUGIN_BASE . '/templates/icon.png',
             ),
         );
         wp_insert_post( $new_course );  
