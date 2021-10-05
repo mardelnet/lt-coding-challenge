@@ -38,6 +38,7 @@ $loop = new WP_Query( $args );
     </div>
     <button id="ajax">Load More Courses</button>
   </div>
+  <script src='<?php echo plugin_dir_url( __FILE__ ); ?>/load_more_courses.js'></script>
 </body>
 </html>
 
